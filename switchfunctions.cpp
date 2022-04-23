@@ -18,5 +18,7 @@ void switch_handler(int choice, vector<ActiveBus> activebus)
     case 2:
         scheduleBus(activebus, buses, routes);
         break;
+    default:
+        cout << "under construction (:" << endl;
     }
 }

@@ -7,6 +7,11 @@ using namespace std;
 int calculateFreeSeat(string passenger[]);
 void assignSeat(int i, ActiveBus bus, string message);
 void appointSeatPageHeader(ActiveBus bus);
+/**
+ * @brief allow us to assign a given to assign a seat from active buses
+ * 
+ * @param buses active buses
+ */
 void appointSeat(vector<ActiveBus> buses)
 {
     Bus bus = {35, 10001, "Sibella"};
@@ -54,7 +59,12 @@ void appointSeat(vector<ActiveBus> buses)
     cin>>i;
     assignSeat(i, buses[i], "");
 }
-
+/**
+ * @brief it calculate the number of free seat available for a given bus
+ * 
+ * @param passenger: an array of passenger info on a given buse
+ * @return int the number of free seat
+ */
 int calculateFreeSeat(string passenger[])
 {
     int freeSeat = 0;
@@ -67,6 +77,13 @@ int calculateFreeSeat(string passenger[])
     }
     return freeSeat;
 }
+/**
+ * @brief an extension function for appointSeat
+ * 
+ * @param i the seat number we need to assing
+ * @param bus the structure of a bus we need to assing for custome
+ * @param message the message we need to show when the error or success happen
+ */
 void assignSeat(int i, ActiveBus bus, string message)
 {
     appointSeatPageHeader(bus);

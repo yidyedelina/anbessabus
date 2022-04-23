@@ -3,7 +3,14 @@
 #include "main.h"
 using namespace std;
 
-
+/**
+ * apoint A bus 
+ * 
+ * @param activebus: collection of active buses 
+ * @param buses: a structure of bus
+ * @param routes: a collection of routes that have every details about the bus number, routes, 
+ * @return ** void 
+ */
 
 void scheduleBus(vector<ActiveBus> activebus, Bus buses[], Route routes[])
 {
@@ -62,6 +69,13 @@ void scheduleBus(vector<ActiveBus> activebus, Bus buses[], Route routes[])
     }
     switch_handler(choice, activebus);
 }
+/**
+ * @brief search a bus with a given plate number 
+ * 
+ * @param plateNumber the plate number of a bus we want to search in buses collection
+ * @param buses collection of all buses
+ * @return Bus
+ */
 
 Bus searchBus(int plateNumber, Bus buses[])
 {
@@ -74,6 +88,13 @@ Bus searchBus(int plateNumber, Bus buses[])
     }
     return buses[0];
 }
+/**
+ * @brief search for a specified route frim a given number
+ * 
+ * @param number the bus number
+ * @param routes the collection of route
+ * @return Route 
+ */
 Route searchRoute(int number, Route routes[])
 {
     for(int i = 0; i < ROUTE_S; i++)
@@ -85,6 +106,11 @@ Route searchRoute(int number, Route routes[])
     }
     return routes[0];
 }
+/**
+ * @brief initialize the passenger array with " "
+ * 
+ * @param passenger hold the information about the passenger
+ */
 void fillSeatArray(string passenger[])
 {
     for(int i = 0; i < SEAT_S; i++)

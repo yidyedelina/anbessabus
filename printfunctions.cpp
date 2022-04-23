@@ -22,7 +22,7 @@ void printHomeScreen(vector<ActiveBus> activebus)
     for(int i = 0; i < size; i++)
     {   
         charPrinter(' ', 80);
-        cout << '[' << i << ']' << ' ' << menu[i] << endl;
+        cout << '[' << i + 1 << ']' << ' ' << menu[i] << endl;
         cout << endl;
     }
     charPrinter(' ', 80);
