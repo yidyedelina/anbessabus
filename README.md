@@ -2,7 +2,7 @@
 
 ## compile using if u have gnu compiler collection
 ```
-gcc *.cpp
+g++ *.cpp
 
 ```
 ## Try to read the code ask anything you want to know
