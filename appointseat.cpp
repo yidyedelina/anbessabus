@@ -57,7 +57,7 @@ void appointSeat(vector<ActiveBus> buses)
     charPrinter(' ', 30);
     cout << "Please enter your choice:";
     cin>>i;
-    assignSeat(i, buses[i], "");
+    assignSeat(i, buses[i - 1], "");
 }
 /**
  * @brief it calculate the number of free seat available for a given bus
