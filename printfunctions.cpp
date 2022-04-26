@@ -9,7 +9,7 @@ using namespace std;
  * Return: nothing
  */
 
-void printHomeScreen(vector<ActiveBus> activebus)
+void printHomeScreen(vector<ActiveBus> activebus, vector<ActiveBus> history)
 {
     string menu[] = {"Appoint seat", "Schedule Bus Route", "Show Active Buses", "Check Seat Availability"};
     string welcome = "TICKET RESERVATION SYSTEM";
@@ -33,9 +33,9 @@ void printHomeScreen(vector<ActiveBus> activebus)
     //accepting the user it;s choice;
     int choice;
     charPrinter(' ', 70);
-    cout << "Please Enter your preference=>" << ' ';
+    cout << "Please Enter your preference:" << ' ';
     cin>>choice;
-    switch_handler(choice, activebus);
+    switch_handler(choice, activebus, history);
 }
 
 void charPrinter(char c, int n)
@@ -53,8 +53,7 @@ void charPrinter(char c, int n)
  */
 void printHomeScreenHeader(string message)
 {
-    int a;
-    system("clear");
+    system("clear"); ///in window cls
     charPrinter(' ', 50);
     charPrinter('*', 100);
     cout << '\n';

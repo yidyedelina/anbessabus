@@ -4,19 +4,24 @@
 
 using namespace std;
 
-
-void switch_handler(int choice, vector<ActiveBus> activebus)
+void switch_handler(int choice, vector<ActiveBus> activebus, vector<ActiveBus> history)
 {
     switch (choice)
     {
     case 0:
-        printHomeScreen(activebus);
+        printHomeScreen(activebus, history);
         break;
     case 1:
         appointSeat(activebus);
         break;
     case 2:
-        scheduleBus(activebus, buses, routes);
+        scheduleBus(activebus, buses, routes, history);
+        break;
+    case 3:
+        showactivebus(activebus, history);
+        break;
+    case 4:
+        printHistoryPage(activebus, history);
         break;
     default:
         cout << "under construction (:" << endl;

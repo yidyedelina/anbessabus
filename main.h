@@ -51,13 +51,16 @@ struct ActiveBus
 
 void printHomeScreenHeader(string message);
 void charPrinter(char c, int n);
-void printHomeScreen(vector<ActiveBus> activebus);
-void switch_handler(int choice, vector<ActiveBus> activebus);
-void scheduleBus(vector<ActiveBus> activebus, Bus buses[], Route routes[]);
+void printHomeScreen(vector<ActiveBus> activebus, vector<ActiveBus> history);
+void switch_handler(int choice, vector<ActiveBus> activebus, vector<ActiveBus> history);
+void scheduleBus(vector<ActiveBus> activebus, Bus buses[], Route routes[], vector<ActiveBus> history);
 Bus searchBus(int plateNumber, Bus buses[]);
 Route searchRoute(int number, Route routes[]);
 Bus* getBusArray();
 void appointSeat(vector<ActiveBus> buses);
 void fillSeatArray(string passenger[]);
+void showactivebus(vector<ActiveBus> buses, vector<ActiveBus> history);
+int calculateFreeSeat(string passenger[]);
+void printHistoryPage(vector<ActiveBus> active, vector<ActiveBus> history);
 
 #endif

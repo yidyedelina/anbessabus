@@ -12,7 +12,7 @@ using namespace std;
  * @return ** void 
  */
 
-void scheduleBus(vector<ActiveBus> activebus, Bus buses[], Route routes[])
+void scheduleBus(vector<ActiveBus> activebus, Bus buses[], Route routes[], vector<ActiveBus> history)
 {
     int plateNumber;
     string arriveAt;
@@ -42,9 +42,7 @@ void scheduleBus(vector<ActiveBus> activebus, Bus buses[], Route routes[])
     cout << endl;
 
     // asssigning the values we accept from the users
-    string passenger[60];
     
-
     Route route = searchRoute(bus.number, routes);
     ActiveBus appointBus;
     appointBus.bus = bus;
@@ -61,13 +59,13 @@ void scheduleBus(vector<ActiveBus> activebus, Bus buses[], Route routes[])
     charPrinter('\n', 3);
     charPrinter(' ', 50);
     int choice;
-    cout << "Please Enter [0] to go back to home [1] to assign a schedule again [3] to exit:" << endl;
+    cout << "Please Enter [0] to go back to home [2] to assign a schedule again [3] to exit:" << endl;
     cin >> choice;
     if(choice == 3)
     {
         exit(1);
     }
-    switch_handler(choice, activebus);
+    switch_handler(choice, activebus ,history);
 }
 /**
  * @brief search a bus with a given plate number 

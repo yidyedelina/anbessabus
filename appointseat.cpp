@@ -14,16 +14,6 @@ void appointSeatPageHeader(ActiveBus bus);
  */
 void appointSeat(vector<ActiveBus> buses)
 {
-    Bus bus = {35, 10001, "Sibella"};
-    Route route = {83, "Ayat Condominium", "kebena", "6 Kilo", "18 Km", 2.7};
-    ActiveBus appointBus;
-    appointBus.bus = bus;
-    appointBus.arrivatAt = "8:30";
-    appointBus.departureAt = "6:30";
-    appointBus.route = route;
-    fillSeatArray(appointBus.passenger);
-    buses.push_back(appointBus);
-    buses[0].passenger[0] = "John";
     printHomeScreenHeader("Assign Seat For a Passenger");
     charPrinter(' ', 100);
     cout << "Active Buses" << endl;
@@ -131,7 +121,7 @@ void assignSeat(int i, ActiveBus bus, string message)
     cout << "Please Enter The name of the passenger:";
     cin >> passengerName;
     passenger[seatNo] = passengerName;
-    string msg = "Seat No : " + to_string(seatNo) + " Assigned to " + ' ' +passengerName;
+    string msg = "Seat No : " + to_string(seatNo) + " Assigned to " + ' ' + passengerName;
     assignSeat(i, bus, msg);
 }
 

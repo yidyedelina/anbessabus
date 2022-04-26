@@ -3,5 +3,6 @@
 int main()
 {
     vector<ActiveBus> activebus;
-    printHomeScreen(activebus);
+    vector<ActiveBus> history;
+    printHomeScreen(activebus, history);
 }
