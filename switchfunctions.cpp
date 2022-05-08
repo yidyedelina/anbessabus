@@ -12,7 +12,7 @@ void switch_handler(int choice, vector<ActiveBus> activebus, vector<ActiveBus> h
         printHomeScreen(activebus, history);
         break;
     case 1:
-        appointSeat(activebus);
+        appointSeat(activebus,history);
         break;
     case 2:
         scheduleBus(activebus, buses, routes, history);
@@ -24,6 +24,6 @@ void switch_handler(int choice, vector<ActiveBus> activebus, vector<ActiveBus> h
         printHistoryPage(activebus, history);
         break;
     default:
-        cout << "under construction (:" << endl;
+        exit (0);
     }
 }

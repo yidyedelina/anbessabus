@@ -11,7 +11,7 @@ using namespace std;
 
 void printHomeScreen(vector<ActiveBus> activebus, vector<ActiveBus> history)
 {
-    string menu[] = {"Appoint seat", "Schedule Bus Route", "Show Active Buses", "Check Seat Availability"};
+    string menu[] = {"Appoint seat", "Schedule Bus Route", "Show Active Buses", "History"};
     string welcome = "TICKET RESERVATION SYSTEM";
     int size = sizeof(menu)/sizeof(menu[0]);
     printHomeScreenHeader(welcome);
@@ -29,7 +29,7 @@ void printHomeScreen(vector<ActiveBus> activebus, vector<ActiveBus> history)
     charPrinter('*', 40);
     charPrinter('\n', 4);
     charPrinter(' ', 90);
-    cout << '[' << size << ']' << ' ' << "Exit" << endl;
+    cout << '[' << size + 1 << ']' << ' ' << "Exit" << endl;
     //accepting the user it;s choice;
     int choice;
     charPrinter(' ', 70);

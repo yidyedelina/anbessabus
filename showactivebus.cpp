@@ -4,7 +4,7 @@
 #include <iomanip>
 using namespace std;
 void eraseActiveBus(int n, vector<ActiveBus> buses, vector<ActiveBus> history);
-
+//bus reservation function
 void showactivebus(vector<ActiveBus> buses, vector<ActiveBus> history)
 {
     printHomeScreenHeader("Active Buses");

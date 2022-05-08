@@ -57,7 +57,7 @@ void scheduleBus(vector<ActiveBus> activebus, Bus buses[], Route routes[], vecto
 Bus searchBus(int plateNumber, Bus buses[]);
 Route searchRoute(int number, Route routes[]);
 Bus* getBusArray();
-void appointSeat(vector<ActiveBus> buses);
+void appointSeat(vector<ActiveBus> buses, vector<ActiveBus> history);
 void fillSeatArray(string passenger[]);
 void showactivebus(vector<ActiveBus> buses, vector<ActiveBus> history);
 int calculateFreeSeat(string passenger[]);

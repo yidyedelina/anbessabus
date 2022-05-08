@@ -23,12 +23,13 @@ void scheduleBus(vector<ActiveBus> activebus, Bus buses[], Route routes[], vecto
     PLATE_NUMBER:
     charPrinter(' ', 50);
     //accepting data from the user
-    cout << "Please Enter the Plate Number you want to assign the passenger:";
+    cout << "Please Enter the Plate Number you want to assign[10000-11000]:";
     cin >> plateNumber;
     cout << endl;
     Bus bus = searchBus(plateNumber, buses);
     if(bus.plateNumber == 0)
     {
+        charPrinter(' ', 50);
         cout << "There is No bus with this plate please try again" << endl;
         goto PLATE_NUMBER;
     }
@@ -53,13 +54,13 @@ void scheduleBus(vector<ActiveBus> activebus, Bus buses[], Route routes[], vecto
     activebus.push_back(appointBus);
     charPrinter('\n', 3);
     charPrinter(' ', 50);
-    cout << "The bus which has the plate number" << plateNumber << "arrive at" << arriveAt << "departure at" << departureAt << endl;
+    cout << "The bus which has the plate number " << plateNumber << " arrive at " << arriveAt << " departure at " << departureAt << endl;
     charPrinter(' ', 50);
     cout << "Successfully Assigned" << endl;
     charPrinter('\n', 3);
     charPrinter(' ', 50);
     int choice;
-    cout << "Please Enter [0] to go back to home [2] to assign a schedule again [3] to exit:" << endl;
+    cout << "Please Enter [0] to go back to home [2] to assign a schedule again [3] to exit:";
     cin >> choice;
     if(choice == 3)
     {
